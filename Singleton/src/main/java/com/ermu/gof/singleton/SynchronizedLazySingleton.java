@@ -15,6 +15,10 @@ public class SynchronizedLazySingleton {
     private SynchronizedLazySingleton() {
     }
 
+    /**
+     * 如果实例不为空  方法锁住，多个线程调用方法 造成阻塞 影响性能
+     * @return
+     */
     private synchronized SynchronizedLazySingleton getInstance(){
         if (instance == null){
             instance = new SynchronizedLazySingleton();

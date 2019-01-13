@@ -14,6 +14,10 @@ package com.ermu.gof.singleton;
 public class LazySingleton {
     private static LazySingleton ourInstance = null;
 
+    /**
+     *   没有实例时, 多个线程进入，判断实例都为空 就造成多实例
+     * @return
+     */
     public static LazySingleton getInstance() {
         if(ourInstance == null){
             ourInstance = new LazySingleton();

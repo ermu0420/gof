@@ -15,6 +15,12 @@ public class Singleton {
     private Singleton(){
         System.out.println("创建了实例");
     }
+
+    /**
+     *  如果类比较大，比较占内存，初始化的适合就实例了，占用了内存
+     *  但是之后又不用，浪费内存。
+     * @return
+     */
     private static Singleton getInstance(){
         return instance;
     }
